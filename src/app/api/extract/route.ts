@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+export const maxDuration = 60; // Extend Vercel timeout to 60 seconds
 import { create } from 'youtube-dl-exec';
 import path from 'path';
 import os from 'os';

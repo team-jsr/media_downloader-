@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+export const maxDuration = 60; // Extend Vercel timeout to 60 seconds
 import { create } from 'youtube-dl-exec';
 import path from 'path';
 import os from 'os';
@@ -47,7 +48,7 @@ export async function GET(req: NextRequest) {
     }
 
     // @ts-ignore - Next.js NextResponse can accept a ReadableStream, we need to adapt Node's stream.
-   const webStream = Readable.toWeb(subprocess.stdout) as any;
+    const webStream = Readable.toWeb(subprocess.stdout) as any;
 
     return new NextResponse(webStream, {
       status: 200,
