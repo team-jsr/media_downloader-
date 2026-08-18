@@ -47,7 +47,7 @@ export async function GET(req: NextRequest) {
     }
 
     // @ts-ignore - Next.js NextResponse can accept a ReadableStream, we need to adapt Node's stream.
-    const webStream = Readable.toWeb(subprocess.stdout);
+   const webStream = Readable.toWeb(subprocess.stdout) as any;
 
     return new NextResponse(webStream, {
       status: 200,
