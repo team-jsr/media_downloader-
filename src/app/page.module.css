@@ -1,0 +1,146 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+.heroSection {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.heroText {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.searchContainer {
+  width: 100%;
+  padding: 24px;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .searchForm {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.inputGroup {
+  flex: 1;
+}
+
+.submitBtn {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .submitBtn {
+    width: auto;
+    min-width: 160px;
+  }
+}
+
+.errorContainer {
+  width: 100%;
+  padding: 16px;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.errorIcon {
+  color: #ef4444;
+}
+
+.resultContainer {
+  width: 100%;
+  animation: fadeIn var(--transition-normal) forwards;
+}
+
+.featuresSection {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 0;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .featureGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.featureCard {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  transition: transform var(--transition-normal);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+}
+
+.featureIconWrapper {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.featureCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.featureCard p {
+  color: #888;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
